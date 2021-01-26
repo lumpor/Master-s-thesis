@@ -1,0 +1,15 @@
+% Chapter Template
+
+\chapter{Previous Work} % Main chapter title
+
+\label{previouswork} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+CFD simulations using LES (Large Eddy Simulation) turbulence models have long been used to investigate non-reactive air pollutant dispersion in various setups. Baker et al (2004)\parencite{baker2004} was the first paper to perform LES in a street canyon that included chemical reactions. They simulated a street canyon with a 1:1 aspect ratio and a constant dispersion of $NO_x$ against a background concentration of $O_3$ , with a constant overhead wind perpendicular to the street. Proceeding studies have built on this setup further like Zhong et al. (2016)\parencite{zhong2016} incorporating VOCs (Volatile Organic Compounds) into the chemistry scheme or Han et al. (2020)\parencite{han2020}, who studied the effects of roof-level turbulence. The configuration closest to ours is the one set up by Grawe et al\parencite{Grawe}. They simulated the photolytic effects of partial sunlight by assigning a triangle-shaped shaded area to their domain (representing a sunlight direction vector of [1 -1 0]), decreasing the ozone breakdown rate in said area in relation to the rest of the domain. Their results clearly demonstrate that the effects of shading are significant for the simulation results. Our simulation further expands upon theirs by accounting for the effects of heat transfer, as well as letting the sun's position vary over time.
+
+Both the physical and chemical models have many potential levels of complexity to add to them, but this is best done in a step-by-step manner, as to make one able to better analyze the impact of each added parameter. Baker and most of the studies modelling their simulations after his setup, including Grawe's, have assumed their system to be isothermal, with the temperature lying at a constant 293K.
+
+The general observed trend is that NO and $NO_2$ concentrations are high at the proximity of the source points (the ground) and at the leward side of the street. $O_3$ tends to enter the inter-building area through the windward wall, rapidly dissipating by reacting with NO. In each case chemical equilibrium is reached in the middle of the main vortex. It has been shown that buoyancy effects are significant at high wind speeds, and that models that include buoyancy should incorporate an LES-type turbulence model for more accurate results\parencite{grawe2004}\parencite{tominaga}.
